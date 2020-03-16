@@ -1,0 +1,28 @@
+{% extends 'accounts/main.html' %}
+{% block content %}
+{% load static %}
+<table>
+  <tr>
+    <th><a href="{% url 'home' %}">back to profile </a></th>
+    <th> </th>
+  </tr>
+  <tr>
+    <td>account Settings</td>
+    <td><form class="" action="" method="POST" enctype="multipart/form-data">
+      {% csrf_token %}
+      {{form.as_p}}
+      <input class="btn btn-primary" name="" type="submit" value="UPDATE INFORMATION">
+    </form></td>
+  </tr>
+  <tr>
+    <td>
+      <img class="profile-pic" src="{{request.user.customer.profile_pic.url}}" alt="">
+    </td>
+  </tr>
+
+
+</table>
+
+<br>
+
+{% endblock %}

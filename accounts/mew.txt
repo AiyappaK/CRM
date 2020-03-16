@@ -1,0 +1,6 @@
+# username = user =
+			# group =Group.objects.get(name = 'customer')
+			# user.groups.add(group)
+{% if request.user.is_staff %}
+
+      {% endif %}
